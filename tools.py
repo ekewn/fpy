@@ -86,8 +86,6 @@ def bind_fail[T, U](f: Callable[[T], U]) -> Callable[[Failable[T]], Failable[U]]
 if __name__ == "__main__":
 
     add_one: Callable[[int], int] = lambda x: x + 1
-    tuplify: Callable[[int], tuple[int]] = lambda x: (x,)
-    listify: Callable[[int], list[int]] = lambda x: [x]
 
     add_one_wlogging = log(add_one)
 
